@@ -19,12 +19,8 @@ public class Jugador extends Componente{
     int dx, dy;
     Graphics gj; 
    
-    public Jugador( int xp, int yp, int c, Graphics g) {
+    public Jugador() {
         lib = new LibreriaGrafica();
-        posX= xp;
-        posY=yp;
-        color=c;
-        gj = g;
         dx=5;
         dy=80;
     }
@@ -44,9 +40,13 @@ public class Jugador extends Componente{
     
     }
     
-    public void dibujerseRelleno(){
+    public void dibujerseRelleno( int xp, int yp, int c, Graphics g){
     int dx1, dy1;
     dx1=dx; dy1=dy;
+     posX= xp;
+     posY=yp;
+     color=c;
+     gj = g;
     for(int i = dx;i>=0;i--){
      lib.dibujarLinea(posX, posY, posX+dx1, posY, color,gj);
         lib.dibujarLinea(posX, posY, posX, posY+dy1, color, gj);

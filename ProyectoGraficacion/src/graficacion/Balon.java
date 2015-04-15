@@ -18,11 +18,10 @@ public class Balon extends Componente{
     int radio;
     Graphics g1;
 
-    public Balon(int x, int y, Graphics g) {
-        px=x;
-        py=y;
+    public Balon() {
+        
         radio=15;
-        g1=g;
+        
         lib = new LibreriaGrafica();
     }
     
@@ -31,9 +30,9 @@ public class Balon extends Componente{
  public void dibujarse(){
  }
  
- public void dibujarseRelleno(){
+ public void dibujarseRelleno(int x, int y, Graphics g){
  int r =radio;
- 
+ px=x;  py=y;g1=g;
  for(int i=r;i>=0;i--){
  lib.dibujarCirculo(px, py, i, 1,g1);
  }
