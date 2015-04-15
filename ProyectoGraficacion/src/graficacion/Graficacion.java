@@ -17,11 +17,11 @@ public class Graficacion {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-         new FrameDibujo();
+        // new FrameDibujo();
        //Principal p = new Principal();
        //p.run();
        // new TestProgram();
-       
+       new PingPongGame();
     }
     
 }
