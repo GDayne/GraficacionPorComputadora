@@ -28,7 +28,7 @@ public class FrameDibujo extends JFrame {
      this.add(panel);
      this.setVisible(true);
      this.setBounds(200, 50, 900, 600);
-     
+    
     
      
     }

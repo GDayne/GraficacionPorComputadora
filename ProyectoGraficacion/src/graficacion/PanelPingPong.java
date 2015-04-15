@@ -39,8 +39,10 @@ class PanelPingPong extends JPanel implements KeyListener{
         Graphics2D gd2 = (Graphics2D)g;
          Jugador j1= new Jugador(20, 275, 1, g);
          Jugador j2= new Jugador(850, 275, 0, g);
-         j1.dibujarse();
-         j2.dibujarse();
+         Balon b = new Balon(400, 300,g);
+         b.dibujarseRelleno();
+         j1.dibujerseRelleno();
+         j2.dibujerseRelleno();
          
          
         

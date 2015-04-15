@@ -6,6 +6,8 @@
 
 package graficacion;
 
+import java.awt.Graphics;
+
 /**
  *
  * @author Saul
@@ -14,11 +16,13 @@ public class Balon extends Componente{
     int px;
     int py;
     int radio;
+    Graphics g1;
 
-    public Balon(int x, int y) {
+    public Balon(int x, int y, Graphics g) {
         px=x;
         py=y;
-        radio=5;
+        radio=15;
+        g1=g;
         lib = new LibreriaGrafica();
     }
     
@@ -30,7 +34,9 @@ public class Balon extends Componente{
  public void dibujarseRelleno(){
  int r =radio;
  
- 
+ for(int i=r;i>=0;i--){
+ lib.dibujarCirculo(px, py, i, 1,g1);
+ }
  
  }
  
